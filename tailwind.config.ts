@@ -47,30 +47,30 @@ const config: Config = {
         "on-tertiary-fixed-variant": "#454745",
 
         surface: {
-          DEFAULT: "var(--surface)",
-          dim: "var(--surface-dim)",
-          bright: "var(--surface)",
-          variant: "var(--surface-variant)",
-          tint: "var(--surface-tint)",
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          dim: "rgb(var(--surface-dim) / <alpha-value>)",
+          bright: "rgb(var(--surface) / <alpha-value>)",
+          variant: "rgb(var(--surface-variant) / <alpha-value>)",
+          tint: "rgb(var(--surface-tint) / <alpha-value>)",
         },
         "surface-container": {
-          lowest: "var(--surface-container-lowest)",
-          low: "var(--surface-container-low)",
-          DEFAULT: "var(--surface-container)",
-          high: "var(--surface-container-high)",
-          highest: "var(--surface-container-highest)",
+          lowest: "rgb(var(--surface-container-lowest) / <alpha-value>)",
+          low: "rgb(var(--surface-container-low) / <alpha-value>)",
+          DEFAULT: "rgb(var(--surface-container) / <alpha-value>)",
+          high: "rgb(var(--surface-container-high) / <alpha-value>)",
+          highest: "rgb(var(--surface-container-highest) / <alpha-value>)",
         },
-        "on-surface": "var(--on-surface)",
-        "on-surface-variant": "var(--on-surface-variant)",
-        "inverse-surface": "var(--inverse-surface)",
-        "inverse-on-surface": "var(--inverse-on-surface)",
+        "on-surface": "rgb(var(--on-surface) / <alpha-value>)",
+        "on-surface-variant": "rgb(var(--on-surface-variant) / <alpha-value>)",
+        "inverse-surface": "rgb(var(--inverse-surface) / <alpha-value>)",
+        "inverse-on-surface": "rgb(var(--inverse-on-surface) / <alpha-value>)",
 
-        background: "var(--background)",
-        "on-background": "var(--on-background)",
+        background: "rgb(var(--background) / <alpha-value>)",
+        "on-background": "rgb(var(--on-background) / <alpha-value>)",
 
         outline: {
-          DEFAULT: "var(--outline)",
-          variant: "var(--outline-variant)",
+          DEFAULT: "rgb(var(--outline) / <alpha-value>)",
+          variant: "rgb(var(--outline-variant) / <alpha-value>)",
         },
 
         error: {

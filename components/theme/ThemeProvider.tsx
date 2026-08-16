@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -22,42 +22,59 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [theme, setThemeState] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    // Read saved theme from localStorage or system preference
-    const savedTheme = localStorage.getItem('vente2emain-theme') as Theme | null;
-    if (savedTheme === 'dark' || savedTheme === 'light') {
-      setThemeState(savedTheme);
-      applyThemeClass(savedTheme);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme: Theme = prefersDark ? 'dark' : 'light';
-      setThemeState(initialTheme);
-      applyThemeClass(initialTheme);
-    }
-    setMounted(true);
-  }, []);
-
-  const applyThemeClass = (t: Theme) => {
+  const applyThemeClass = useCallback((t: Theme) => {
+    if (typeof document === 'undefined') return;
     const root = document.documentElement;
     if (t === 'dark') {
       root.classList.add('dark');
+      root.classList.remove('light');
+      root.setAttribute('data-theme', 'dark');
       root.style.colorScheme = 'dark';
     } else {
       root.classList.remove('dark');
+      root.classList.add('light');
+      root.setAttribute('data-theme', 'light');
       root.style.colorScheme = 'light';
     }
-  };
+  }, []);
 
-  const setTheme = (newTheme: Theme) => {
+  useEffect(() => {
+    // Check initial state
+    try {
+      const savedTheme = localStorage.getItem('vente2emain-theme') as Theme | null;
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        setThemeState(savedTheme);
+        applyThemeClass(savedTheme);
+      } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme: Theme = prefersDark ? 'dark' : 'light';
+        setThemeState(initialTheme);
+        applyThemeClass(initialTheme);
+      }
+    } catch (e) {
+      console.warn('Theme storage error:', e);
+    }
+    setMounted(true);
+  }, [applyThemeClass]);
+
+  const setTheme = useCallback((newTheme: Theme) => {
     setThemeState(newTheme);
     applyThemeClass(newTheme);
-    localStorage.setItem('vente2emain-theme', newTheme);
-  };
+    try {
+      localStorage.setItem('vente2emain-theme', newTheme);
+    } catch (e) {}
+  }, [applyThemeClass]);
 
-  const toggleTheme = () => {
-    const nextTheme: Theme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-  };
+  const toggleTheme = useCallback(() => {
+    setThemeState((prev) => {
+      const nextTheme: Theme = prev === 'dark' ? 'light' : 'dark';
+      applyThemeClass(nextTheme);
+      try {
+        localStorage.setItem('vente2emain-theme', nextTheme);
+      } catch (e) {}
+      return nextTheme;
+    });
+  }, [applyThemeClass]);
 
   return (
     <ThemeContext.Provider

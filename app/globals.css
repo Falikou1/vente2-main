@@ -10,65 +10,77 @@
     --font-be-vietnam-pro: 'Be Vietnam Pro', sans-serif;
     --font-inter: 'Inter', sans-serif;
 
-    /* Light Theme Palette */
-    --background: #f9f9fc;
-    --on-background: #1a1c1e;
+    /* Light Theme Palette (RGB channels) */
+    --background: 249 249 252;
+    --on-background: 26 28 30;
 
-    --surface: #ffffff;
-    --surface-dim: #dadadc;
-    --surface-variant: #e2e2e5;
-    --surface-tint: #2b685c;
+    --surface: 255 255 255;
+    --surface-dim: 218 218 220;
+    --surface-variant: 226 226 229;
+    --surface-tint: 43 104 92;
 
-    --surface-container-lowest: #ffffff;
-    --surface-container-low: #f3f3f6;
-    --surface-container: #eeeef0;
-    --surface-container-high: #e8e8ea;
-    --surface-container-highest: #e2e2e5;
+    --surface-container-lowest: 255 255 255;
+    --surface-container-low: 243 243 246;
+    --surface-container: 238 238 240;
+    --surface-container-high: 232 232 234;
+    --surface-container-highest: 226 226 229;
 
-    --on-surface: #1a1c1e;
-    --on-surface-variant: #495450;
-    --inverse-surface: #2f3133;
-    --inverse-on-surface: #f0f0f3;
+    --on-surface: 26 28 30;
+    --on-surface-variant: 73 84 80;
+    --inverse-surface: 47 49 51;
+    --inverse-on-surface: 240 240 243;
 
-    --outline: #707976;
-    --outline-variant: #d5dedb;
+    --outline: 112 121 118;
+    --outline-variant: 191 201 197;
   }
 
   .dark {
-    /* Dark Theme Palette (Deep Emerald Modern Dark) */
-    --background: #0b100e;
-    --on-background: #e6edea;
+    /* Dark Theme Palette (Deep Emerald / Slate Modern Dark) */
+    --background: 11 16 14;
+    --on-background: 230 237 234;
 
-    --surface: #131916;
-    --surface-dim: #0e1411;
-    --surface-variant: #222d28;
-    --surface-tint: #4ea894;
+    --surface: 19 25 22;
+    --surface-dim: 14 20 17;
+    --surface-variant: 40 52 47;
+    --surface-tint: 78 168 148;
 
-    --surface-container-lowest: #0e1411;
-    --surface-container-low: #161e1b;
-    --surface-container: #1c2622;
-    --surface-container-high: #23302b;
-    --surface-container-highest: #2c3c36;
+    --surface-container-lowest: 14 20 17;
+    --surface-container-low: 22 30 27;
+    --surface-container: 28 38 34;
+    --surface-container-high: 35 48 43;
+    --surface-container-highest: 44 60 54;
 
-    --on-surface: #e6edea;
-    --on-surface-variant: #9eb1aa;
-    --inverse-surface: #e6edea;
-    --inverse-on-surface: #131916;
+    --on-surface: 230 237 234;
+    --on-surface-variant: 158 177 170;
+    --inverse-surface: 230 237 234;
+    --inverse-on-surface: 19 25 22;
 
-    --outline: #647a72;
-    --outline-variant: #22302a;
+    --outline: 100 122 114;
+    --outline-variant: 38 52 46;
   }
 
-  html,
+  html {
+    background-color: rgb(var(--background));
+    color: rgb(var(--on-background));
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html:not(.dark) {
+    color-scheme: light;
+  }
+
   body {
     margin: 0;
     padding: 0;
-    background-color: var(--background);
-    color: var(--on-background);
+    background-color: rgb(var(--background));
+    color: rgb(var(--on-background));
     font-family: var(--font-inter);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition: background-color 0.25s ease, color 0.25s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   /* Safe area padding for mobile notches */
