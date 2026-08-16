@@ -1,0 +1,137 @@
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#00322a", "on-primary-fixed": "#00201b", "on-secondary-container": "#5d2c00", "secondary-fixed": "#ffdcc6", "surface-tint": "#2b685c", "on-surface": "#1a1c1e", "on-primary": "#ffffff", "background": "#f9f9fc", "inverse-surface": "#2f3133", "on-secondary-fixed-variant": "#723700", "outline": "#707976", "on-error": "#ffffff", "on-tertiary-fixed": "#1a1c1a", "secondary-container": "#fd8100", "surface": "#f9f9fc", "primary-fixed": "#b0efdf", "tertiary-container": "#404240", "surface-container": "#eeeef0", "surface-container-low": "#f3f3f6", "on-primary-container": "#7dbaab", "on-tertiary": "#ffffff", "surface-container-highest": "#e2e2e5", "surface-container-lowest": "#ffffff", "tertiary": "#2a2c2a", "primary-container": "#004b40", "outline-variant": "#bfc9c5", "surface-variant": "#e2e2e5", "inverse-primary": "#95d3c4", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#454745", "tertiary-fixed": "#e2e3e0", "surface-dim": "#dadadc", "error": "#ba1a1a", "secondary": "#954a00", "secondary-fixed-dim": "#ffb785", "tertiary-fixed-dim": "#c6c7c4", "on-secondary-fixed": "#301400", "inverse-on-surface": "#f0f0f3", "error-container": "#ffdad6", "surface-container-high": "#e8e8ea", "primary-fixed-dim": "#95d3c4", "surface-bright": "#f9f9fc", "on-error-container": "#93000a", "on-tertiary-container": "#adaeab", "on-surface-variant": "#3f4946", "on-primary-fixed-variant": "#095045", "on-background": "#1a1c1e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "16px", "stack-md": "24px", "container-margin": "20px", "stack-sm": "12px", "stack-lg": "48px", "base": "8px" }, "fontFamily": { "body-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "label-sm": ["Inter"], "headline-lg": ["Be Vietnam Pro"], "display-lg": ["Be Vietnam Pro"], "label-md": ["Inter"] }, "fontSize": { "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }] } } } }</script><style>@layer base { .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-container-margin flex items-center gap-stack-sm"><button class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined">arrow_back</span></button><h1 class="font-headline-md text-headline-md">Publier</h1></div></header><main class="pt-16 pb-safe bg-background min-h-screen"><div class="flex flex-col w-full px-container-margin gap-stack-lg py-6">
+<!-- Subscription Notice -->
+<div class="relative bg-secondary-fixed rounded-xl p-4 shadow-sm overflow-hidden flex items-start gap-4">
+<div class="absolute -right-4 -top-4 w-16 h-16 bg-secondary-container/20 rounded-full blur-xl"></div>
+<div class="absolute -bottom-6 -left-6 w-24 h-24 bg-surface-tint/10 rounded-full blur-2xl"></div>
+<div class="w-10 h-10 shrink-0 bg-secondary-container text-on-secondary flex items-center justify-center rounded-full shadow-md z-10">
+<span class="material-symbols-outlined text-xl">featured_seasonal_and_gifts</span>
+</div>
+<div class="flex-1 z-10">
+<h3 class="font-headline-md text-body-lg text-on-secondary-fixed-variant mb-1">Cadeau de bienvenue</h3>
+<p class="font-body-md text-label-md text-on-secondary-fixed-variant/80">Votre période d'essai de 7 jours est activée. Publiez vos annonces gratuitement et gagnez en visibilité dès aujourd'hui.</p>
+</div>
+</div>
+<form class="flex flex-col gap-stack-lg">
+<!-- Photos Section -->
+<section class="flex flex-col gap-stack-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-lg-mobile text-on-surface">Photos de l'article</h2>
+<span class="font-body-md text-label-sm text-outline">0 / 5</span>
+</div>
+<p class="font-body-md text-label-md text-on-surface-variant mb-2">Des photos lumineuses et nettes vendent plus vite.</p>
+<div class="grid grid-cols-3 gap-2">
+<button class="col-span-3 h-32 bg-surface-container-low rounded-xl flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" type="button">
+<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'FILL' 1;">add_photo_alternate</span>
+<span class="font-body-md text-label-md text-on-surface">Ajouter des photos</span>
+</button>
+<!-- Placeholders for future thumbnails -->
+<div class="h-20 bg-surface-container-lowest rounded-lg border-2 border-dashed border-outline-variant flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-outline-variant">image</span>
+</div>
+<div class="h-20 bg-surface-container-lowest rounded-lg border-2 border-dashed border-outline-variant flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-outline-variant">image</span>
+</div>
+<div class="h-20 bg-surface-container-lowest rounded-lg border-2 border-dashed border-outline-variant flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-outline-variant">image</span>
+</div>
+</div>
+</section>
+<!-- Details Section -->
+<section class="flex flex-col gap-stack-md">
+<h2 class="font-headline-md text-headline-lg-mobile text-on-surface">Détails de l'article</h2>
+<!-- Titre -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="title">Titre de l'annonce</label>
+<input class="w-full bg-surface-container-lowest rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline-variant border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm" id="title" placeholder="Ex: iPhone 12 Pro Max 256Go" type="text"/>
+</div>
+<!-- Catégorie & Etat (Grid on desktop, stack on mobile) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="category">Catégorie</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest rounded-lg px-4 py-3 pr-10 font-body-md text-body-md text-on-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none transition-all shadow-sm" id="category">
+<option disabled="" selected="" value="">Choisir une catégorie</option>
+<option value="electronics">Électronique &amp; Téléphones</option>
+<option value="fashion">Mode &amp; Vêtements</option>
+<option value="home">Maison &amp; Décoration</option>
+<option value="vehicles">Véhicules</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="condition">État de l'article</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest rounded-lg px-4 py-3 pr-10 font-body-md text-body-md text-on-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none transition-all shadow-sm" id="condition">
+<option disabled="" selected="" value="">Précisez l'état</option>
+<option value="new">Neuf (Jamais utilisé)</option>
+<option value="like_new">Comme neuf</option>
+<option value="good">Très bon état</option>
+<option value="fair">Bon état</option>
+<option value="used">État correct</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Prix -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="price">Prix de vente</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest rounded-lg pl-4 pr-16 py-3 font-body-md text-body-lg text-on-surface placeholder:text-outline-variant border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm font-semibold" id="price" placeholder="0" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-label-md text-outline font-semibold">FCFA</span>
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="description">Description</label>
+<textarea class="w-full bg-surface-container-lowest rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline-variant border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm resize-none" id="description" placeholder="Décrivez votre article en détail. Indiquez d'éventuels défauts pour rassurer les acheteurs..." rows="4"></textarea>
+</div>
+</section>
+<!-- Localisation Section -->
+<section class="flex flex-col gap-stack-md bg-surface-container-low rounded-2xl p-5 -mx-2 shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h2 class="font-headline-md text-body-lg text-on-surface">Où se trouve l'article ?</h2>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="commune">Commune d'Abidjan</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest rounded-lg px-4 py-3 pr-10 font-body-md text-body-md text-on-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none transition-all shadow-sm" id="commune">
+<option disabled="" selected="" value="">Sélectionnez une commune</option>
+<option value="cocody">Cocody</option>
+<option value="yopougon">Yopougon</option>
+<option value="abobo">Abobo</option>
+<option value="marcory">Marcory</option>
+<option value="treichville">Treichville</option>
+<option value="koumassi">Koumassi</option>
+<option value="port_bouet">Port-Bouët</option>
+<option value="plateau">Le Plateau</option>
+<option value="adjame">Adjamé</option>
+<option value="attecoube">Attécoubé</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider" for="quartier">Quartier (Optionnel)</label>
+<input class="w-full bg-surface-container-lowest rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline-variant border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm" id="quartier" placeholder="Ex: 2 Plateaux Vallon, Niangon..." type="text"/>
+</div>
+</section>
+<!-- Sticky Footer Button -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-surface/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.05)] pb-safe z-40">
+<button class="w-full bg-primary text-on-primary font-label-md text-body-md py-4 rounded-xl shadow-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined">publish</span>
+        Publier mon annonce
+      </button>
+</div>
+<!-- Spacer for sticky footer -->
+<div class="h-20"></div>
+</form>
+</div></main></body></html>
