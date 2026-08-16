@@ -115,8 +115,10 @@ export const Header: React.FC = () => {
                 </span>
               )}
             </Link>
-            <ThemeToggle />
           </div>
+
+          {/* Prominent Desktop Theme Switcher */}
+          <ThemeToggle variant="pill" />
 
           <Link
             href="/publier"
@@ -174,6 +176,10 @@ export const Header: React.FC = () => {
                   <Link href="/messages" onClick={() => setShowUserMenu(false)} className="flex items-center gap-2 px-4 py-2.5 text-sm text-on-surface hover:bg-surface-container-high transition-colors">
                     <span className="material-symbols-outlined text-[18px]">chat_bubble</span>Messagerie
                   </Link>
+                  <div className="px-4 py-2 border-t border-outline-variant/20 flex items-center justify-between">
+                    <span className="text-xs font-semibold text-on-surface-variant">Thème</span>
+                    <ThemeToggle />
+                  </div>
                   <div className="border-t border-outline-variant/20 mt-1">
                     <button
                       onClick={async () => { setShowUserMenu(false); await signOut(); router.push('/'); }}
