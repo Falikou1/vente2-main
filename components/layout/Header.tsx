@@ -6,6 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useMarketplaceStore } from '@/lib/data/store';
 import { useAuth } from '@/lib/supabase/auth-context';
 import { getInitials } from '@/lib/utils';
+import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
@@ -114,6 +115,7 @@ export const Header: React.FC = () => {
                 </span>
               )}
             </Link>
+            <ThemeToggle />
           </div>
 
           <Link

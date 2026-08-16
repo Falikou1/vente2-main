@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/supabase/auth-context';
+import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 const NAV_ITEMS = [
   { label: 'Tableau de bord', href: '/admin/dashboard', icon: 'dashboard' },
@@ -76,6 +77,11 @@ export const AdminSidebar: React.FC = () => {
             <span className="text-xs font-bold text-white truncate">Administrateur Principal</span>
             <span className="text-[10px] text-white/40 font-mono truncate">admin@vente2emain.ci</span>
           </div>
+        </div>
+
+        <div className="flex items-center justify-between px-1 py-1">
+          <span className="text-[11px] font-semibold text-white/50">Thème interface</span>
+          <ThemeToggle className="bg-white/10 text-white hover:bg-white/20" />
         </div>
 
         <button

@@ -9,17 +9,66 @@
   :root {
     --font-be-vietnam-pro: 'Be Vietnam Pro', sans-serif;
     --font-inter: 'Inter', sans-serif;
+
+    /* Light Theme Palette */
+    --background: #f9f9fc;
+    --on-background: #1a1c1e;
+
+    --surface: #ffffff;
+    --surface-dim: #dadadc;
+    --surface-variant: #e2e2e5;
+    --surface-tint: #2b685c;
+
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f3f3f6;
+    --surface-container: #eeeef0;
+    --surface-container-high: #e8e8ea;
+    --surface-container-highest: #e2e2e5;
+
+    --on-surface: #1a1c1e;
+    --on-surface-variant: #495450;
+    --inverse-surface: #2f3133;
+    --inverse-on-surface: #f0f0f3;
+
+    --outline: #707976;
+    --outline-variant: #d5dedb;
+  }
+
+  .dark {
+    /* Dark Theme Palette (Deep Emerald Modern Dark) */
+    --background: #0b100e;
+    --on-background: #e6edea;
+
+    --surface: #131916;
+    --surface-dim: #0e1411;
+    --surface-variant: #222d28;
+    --surface-tint: #4ea894;
+
+    --surface-container-lowest: #0e1411;
+    --surface-container-low: #161e1b;
+    --surface-container: #1c2622;
+    --surface-container-high: #23302b;
+    --surface-container-highest: #2c3c36;
+
+    --on-surface: #e6edea;
+    --on-surface-variant: #9eb1aa;
+    --inverse-surface: #e6edea;
+    --inverse-on-surface: #131916;
+
+    --outline: #647a72;
+    --outline-variant: #22302a;
   }
 
   html,
   body {
     margin: 0;
     padding: 0;
-    background-color: #f9f9fc;
-    color: #1a1c1e;
+    background-color: var(--background);
+    color: var(--on-background);
     font-family: var(--font-inter);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   /* Safe area padding for mobile notches */
@@ -65,6 +114,10 @@
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #dadadc;
   border-radius: 9999px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2c3c36;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {

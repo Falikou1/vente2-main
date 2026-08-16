@@ -47,30 +47,30 @@ const config: Config = {
         "on-tertiary-fixed-variant": "#454745",
 
         surface: {
-          DEFAULT: "#f9f9fc",
-          dim: "#dadadc",
-          bright: "#f9f9fc",
-          variant: "#e2e2e5",
-          tint: "#2b685c",
+          DEFAULT: "var(--surface)",
+          dim: "var(--surface-dim)",
+          bright: "var(--surface)",
+          variant: "var(--surface-variant)",
+          tint: "var(--surface-tint)",
         },
         "surface-container": {
-          lowest: "#ffffff",
-          low: "#f3f3f6",
-          DEFAULT: "#eeeef0",
-          high: "#e8e8ea",
-          highest: "#e2e2e5",
+          lowest: "var(--surface-container-lowest)",
+          low: "var(--surface-container-low)",
+          DEFAULT: "var(--surface-container)",
+          high: "var(--surface-container-high)",
+          highest: "var(--surface-container-highest)",
         },
-        "on-surface": "#1a1c1e",
-        "on-surface-variant": "#3f4946",
-        "inverse-surface": "#2f3133",
-        "inverse-on-surface": "#f0f0f3",
+        "on-surface": "var(--on-surface)",
+        "on-surface-variant": "var(--on-surface-variant)",
+        "inverse-surface": "var(--inverse-surface)",
+        "inverse-on-surface": "var(--inverse-on-surface)",
 
-        background: "#f9f9fc",
-        "on-background": "#1a1c1e",
+        background: "var(--background)",
+        "on-background": "var(--on-background)",
 
         outline: {
-          DEFAULT: "#707976",
-          variant: "#bfc9c5",
+          DEFAULT: "var(--outline)",
+          variant: "var(--outline-variant)",
         },
 
         error: {

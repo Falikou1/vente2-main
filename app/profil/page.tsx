@@ -6,6 +6,7 @@ import { useMarketplaceStore } from '@/lib/data/store';
 import { useAuth } from '@/lib/supabase/auth-context';
 import { formatPriceFCFA, formatRelativeDate, COMMUNE_OPTIONS, getInitials, compressImage } from '@/lib/utils';
 import { CustomSelect } from '@/components/ui/CustomSelect';
+import { useTheme } from '@/components/theme/ThemeProvider';
 import type { Listing } from '@/types';
 
 const CONDITION_LABELS: Record<string, string> = {
@@ -26,6 +27,7 @@ export default function ProfilPage() {
     markAsSold,
     updateListing,
   } = useMarketplaceStore();
+  const { theme, setTheme } = useTheme();
 
   // Edit listing modal state
   const [editingListing, setEditingListing] = useState<Listing | null>(null);
@@ -518,6 +520,39 @@ export default function ProfilPage() {
                 icon="location_on"
                 placeholder="Sélectionner votre commune"
               />
+            </div>
+
+            {/* Theme Preference Option */}
+            <div className="flex flex-col gap-2 pt-2 border-t border-outline-variant/20">
+              <label className="font-label text-xs font-bold uppercase text-on-surface">
+                Thème d'affichage
+              </label>
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  type="button"
+                  onClick={() => setTheme('light')}
+                  className={`p-3.5 rounded-2xl border flex items-center justify-center gap-2.5 text-xs font-bold transition-all cursor-pointer ${
+                    theme === 'light'
+                      ? 'border-primary bg-primary/10 text-primary ring-2 ring-primary/20 shadow-xs'
+                      : 'border-outline-variant/30 text-on-surface-variant hover:border-primary/40'
+                  }`}
+                >
+                  <span className="material-symbols-outlined text-[20px] text-amber-500">light_mode</span>
+                  <span>Mode Clair (Éclairé)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setTheme('dark')}
+                  className={`p-3.5 rounded-2xl border flex items-center justify-center gap-2.5 text-xs font-bold transition-all cursor-pointer ${
+                    theme === 'dark'
+                      ? 'border-primary bg-primary/10 text-primary ring-2 ring-primary/20 shadow-xs'
+                      : 'border-outline-variant/30 text-on-surface-variant hover:border-primary/40'
+                  }`}
+                >
+                  <span className="material-symbols-outlined text-[20px] text-primary">dark_mode</span>
+                  <span>Mode Sombre</span>
+                </button>
+              </div>
             </div>
 
             {/* Submit Button */}
